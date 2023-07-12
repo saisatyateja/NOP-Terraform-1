@@ -8,8 +8,8 @@ resource "null_resource" "remote"{
 provisioner "remote-exec" {
          inline = [
                       "sudo apt update",
-                      "sudo apt-get install dotnet-sdk-7.0 -y",
-                      "git clone https://github.com/4mmnnn/nopCommerceJuly23.git /home/ubuntu/",
+                      "sudo apt install dotnet-sdk-7.0 -y",
+                      "git clone https://github.com/4mmnnn/nopCommerceJuly23.git /home/ubuntu",
                       "cd /home/ubuntu/nopCommerceJuly23/",
                       "dotnet build src/NopCommerce.sln",
                       "cd src/Presentation/Nop.Web",
