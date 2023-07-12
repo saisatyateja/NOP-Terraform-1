@@ -1,3 +1,3 @@
 output "nopurl" {     
-    value = format("http://%s:5000",aws_instance.apache.web_ip)   
+    value = format("http://%s:5000",aws_instance.web.public_ip)   
     }
