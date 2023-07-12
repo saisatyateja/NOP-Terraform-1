@@ -19,10 +19,10 @@ resource "aws_instance" "web" {
   associate_public_ip_address = true     
   key_name = "mykeypair"      
   subnet_id = aws_subnet.mysubnet.id     
-  user_data = file("nop.sh")     
+     
   vpc_security_group_ids = [aws_security_group.mysg.id]
 
   tags = {
-    Name = "HelloWorld"
+    Name = "NOP"
   }
 }
