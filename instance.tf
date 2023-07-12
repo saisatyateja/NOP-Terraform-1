@@ -25,7 +25,4 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
-  output "apacheurl" {     
-    value = format("http://%s:5000",aws_instance.apache.web_ip)   
-    }
 }
