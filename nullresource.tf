@@ -9,8 +9,8 @@ provisioner "remote-exec" {
          inline = [
                       "sudo apt update",
                       "sudo apt-get install dotnet-sdk-7.0 -y",
-                      "git clone https://github.com/4mmnnn/nopCommerceJuly23.git",
-                      "cd nopCommerceJuly23/",
+                      "git clone https://github.com/4mmnnn/nopCommerceJuly23.git /home/ubuntu/",
+                      "cd /home/ubuntu/nopCommerceJuly23/",
                       "dotnet build src/NopCommerce.sln",
                       "cd src/Presentation/Nop.Web",
                       "dotnet publish Nop.Web.csproj -c Release -o /home/ubuntu/nop",
