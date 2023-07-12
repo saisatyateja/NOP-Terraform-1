@@ -14,6 +14,12 @@ resource "aws_security_group" "mysg" {
         protocol = "tcp"
         cidr_blocks = ["0.0.0.0/0"]
     }
+    egress {
+        from_port   = -1
+        to_port     = -1
+        protocol    = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
   depends_on= [aws_vpc.main]
   tags = {
     Name = "allow_tls"
