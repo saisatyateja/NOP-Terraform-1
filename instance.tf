@@ -18,7 +18,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.medium"
   associate_public_ip_address = true     
   key_name = "mykeypair"      
-  subnet_id = aws_subnet.mysubnet[0].id     
+  subnet_id = aws_subnet.mysubnet.id     
   user_data = file("apache.sh")     
   vpc_security_group_ids = [aws_security_group.mysg.id]
 
