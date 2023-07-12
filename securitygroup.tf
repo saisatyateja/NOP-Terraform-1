@@ -2,7 +2,6 @@ resource "aws_security_group" "mysg" {
   name        = "mysg"
   description = "NopCommerce security group"
   vpc_id      = aws_vpc.main.id
-
   ingress {
     description      = "ssh"
     from_port        = 22
