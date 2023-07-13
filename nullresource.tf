@@ -2,7 +2,7 @@ resource "null_resource" "remote"{
     connection {
        type = "ssh"
        user = "ubuntu"
-       private_key = file("mykeypair.pem")
+       private_key = file("virginia.pem")
        host  = aws_instance.web.public_ip
 }
 provisioner "remote-exec" {

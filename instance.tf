@@ -17,7 +17,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.medium"
   associate_public_ip_address = true     
-  key_name = "mykeypair"      
+  key_name = "virginia"      
   subnet_id = aws_subnet.mysubnet.id     
      
   vpc_security_group_ids = [aws_security_group.mysg.id]
